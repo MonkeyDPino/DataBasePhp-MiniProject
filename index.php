@@ -12,6 +12,8 @@
     <a href="consultar_empresas.php">Consultar Empresas</a>
     <a href="consultar_incidentes.php">Consultar Incidentes</a>
     <a href="consultar_supervisores.php">Consultar Supervisores</a>
+    
+    <a href="./bootstrap_version/index.php">bootstrap</a>
 
     
 </body>
