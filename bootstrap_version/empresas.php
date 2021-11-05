@@ -59,6 +59,20 @@
             }
             ?>
 
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "eliminada") {
+            ?>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Empresa Eliminada!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
             <!-- Fin alert-->
             <div class="card">
                 <div class="card-header">Lista de Empresas</div>
@@ -90,7 +104,7 @@
                                     <td><?php echo $extraido["IniContrato"] ?></td>
                                     <td><?php echo $extraido["finContrato"] ?></td>
                                     <td><a class="text-blue" href="./empresas_func/asign_sup.php?codigo=<?php echo $extraido["NumEmpr"]?>"><i class="bi bi-pencil-fill"></i><i class="bi bi-person-square"></i></a></td>
-                                    <td><a class="text-danger" href="./empresas_func/borrar_empr.php?codigo=<?php echo $extraido["NumEmpr"]?>"><i class="bi bi-trash-fill"></i></a></td>
+                                    <td><a onclick="return confirm('Seguro que quieres eliminar la empresa?')"  class="text-danger" href="./empresas_func/borrar_empr.php?codigo=<?php echo $extraido["NumEmpr"]?>"><i class="bi bi-trash-fill"></i></a></td>
                                 </tr>
 
                             <?php
