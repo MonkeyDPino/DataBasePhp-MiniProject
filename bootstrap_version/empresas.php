@@ -3,6 +3,63 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-7">
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "insertada") {
+            ?>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Insertada!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "error") {
+            ?>
+
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Error!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "sin_empleados") {
+            ?>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Sin Empleados!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "asignado") {
+            ?>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Supervisor Asignado!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
+            <!-- Fin alert-->
             <div class="card">
                 <div class="card-header">Lista de Empresas</div>
                 <div class="p-4 overflow-auto">
@@ -32,8 +89,8 @@
                                     <td><?php echo $extraido["NombreGuard"] ?></td>
                                     <td><?php echo $extraido["IniContrato"] ?></td>
                                     <td><?php echo $extraido["finContrato"] ?></td>
-                                    <td>Asignar Supervisor</td>
-                                    <td>Borrar</td>
+                                    <td><a class="text-blue" href="./empresas_func/asign_sup.php?codigo=<?php echo $extraido["NumEmpr"]?>"><i class="bi bi-pencil-fill"></i><i class="bi bi-person-square"></i></a></td>
+                                    <td><a class="text-danger" href="./empresas_func/borrar_empr.php?codigo=<?php echo $extraido["NumEmpr"]?>"><i class="bi bi-trash-fill"></i></a></td>
                                 </tr>
 
                             <?php
@@ -49,7 +106,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header" >Ingresar Empresa</div>
-                <form class="form-horizontal p-4" method="post" action="./register/registrar_empresa.php">
+                <form class="form-horizontal p-4" method="post" action="./empresas_func/registrar_empresa.php">
                     <div class="mb-3">
                         <label class="form-label">Codigo:</label>
                         <input type="number" class="form-control" placeholder="Codigo" name="codigo" autofocus required></input>

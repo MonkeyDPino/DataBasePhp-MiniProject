@@ -2,7 +2,7 @@
     function func_error()
     {
         header("location: ../empresas.php?mensaje=error");
-            exit();
+        exit();
     }
     
     $codigo = $_POST["codigo"];
