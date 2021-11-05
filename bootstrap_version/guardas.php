@@ -31,6 +31,20 @@
             }
             ?>
 
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "trasladado") {
+            ?>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Trasladado!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
+
             <!-- Fin alert-->
             <div class="card">
                 <div class="card-header">Lista de Guardas</div>
