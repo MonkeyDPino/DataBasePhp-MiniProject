@@ -1,17 +1,16 @@
-<?php 
-$contrasena = "";
-$usuario = "root";
-$nombre_bd = "crudphpbstrp";
+<?php
+    $host ="localhost";
+    $username ="root";
+    $password ="";
+    $database ="SecureDB";
 
-try {
-	$bd = new PDO (
-		'mysql:host=localhost;
-		dbname='.$nombre_bd,
-		$usuario,
-		$contrasena,
-		array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
-	);
-} catch (Exception $e) {
-	echo "Problema con la conexion: ".$e->getMessage();
-}
+    if(! $link = mysqli_connect($host,$username,$password)){
+        echo "<h1> No se conecto al servidor </h1>";
+        exit;
+    }
+
+    if(!mysqli_select_db($link,$database)){
+        echo "<h1> No se conecto a la base de datos</h1>";
+        exit;
+    }
 ?>
