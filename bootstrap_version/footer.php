@@ -2,7 +2,7 @@
   <div class="container-fluid bg-dark fixed-bottom">
     <div class="row">
       <footer class="col-md text-center py-3 text-light">
-        Desarrolado por Juan Esteban Pino Vidal
+        Desarrollado por Juan Esteban Pino Vidal
       </footer>
     </div>
   </div>
