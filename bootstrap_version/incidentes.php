@@ -30,6 +30,19 @@
             <?php
             }
             ?>
+            <!-- Inicio alert-->
+            <?php
+            if (isset($_GET['mensaje']) && $_GET['mensaje'] == "editado") {
+            ?>
+
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Incidente Editado!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+            }
+            ?>
 
 
             <!-- Fin alert-->
