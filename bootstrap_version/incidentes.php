@@ -88,7 +88,7 @@
                                     <td><?php echo $extraido["Comentarios"] ?></td>
                                     <td><?php echo $extraido["Fecha"] ?></td>
                                     <td><a class="text-blue" href="./incidentes_func/editar_comen.php?codigo=<?php echo $extraido["NumInci"] ?>"><i class="bi bi-pencil-fill"></i><i class="bi bi-receipt-cutoff"></i></a></td>
-                                    <td><a onclick="return confirm('Seguro que quieres eliminar la empresa?')" class="text-danger" href="./incidentes_func/eliminar_inci.php?codigo=<?php echo $extraido["NumInci"] ?>"><i class="bi bi-trash-fill"></i></a></td>
+                                    <td><a onclick="return confirm('Seguro que quieres eliminar el incidente?')" class="text-danger" href="./incidentes_func/eliminar_inci.php?codigo=<?php echo $extraido["NumInci"] ?>"><i class="bi bi-trash-fill"></i></a></td>
                                 </tr>
 
                             <?php
